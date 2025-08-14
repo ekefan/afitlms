@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: afitlms
+    ports:
+      - "5432:5432" # Expose the port so your app can connect to the DB
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Persist DB data
+
+  app:
+    build: .
+    environment:
+      DB_CONNECTION_STRING: "postgresql://root:secret@postgres:5432/afitlms?sslmode=disable"
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080" # Expose your application port (adjust if needed)
+
+volumes:
+  postgres_data:

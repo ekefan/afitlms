@@ -1,0 +1,22 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    queries: 
+      - "./internal/db/query/user"
+      - "./internal/db/query/student"
+      - "./internal/db/query/lecturer"
+      - "./internal/db/query/course"
+      - "./internal/db/query/attendance"
+    schema:
+      - "./internal/db/migrations/user"      
+    gen:
+      go:
+        package: "db"
+        out: "./internal/db/sqlc"
+        emit_json_tags: true
+        emit_prepared_queries: true
+        emit_interface: true
+        # emit_exact_table_names: true // in another project remember to use false... instead to true
+        emit_empty_slices: true
+
+# search for settings to find the configuration 

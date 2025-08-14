@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Digital Systems",
+        "faculty": "FGCE",
+        "department": "EEE",
+        "level": 200,
+        "course_code": "EEE201"
+    },
+    {
+        "name": "Signals & Systems",
+        "faculty": "FGCE",
+        "department": "TEC",
+        "level": 300,
+        "course_code": "TEC301"
+    },
+    {
+        "name": "Soil Mechanics",
+        "faculty": "FGCE",
+        "department": "CEE",
+        "level": 300,
+        "course_code": "CEE301"
+    },
+    {
+        "name": "Electromagnetics",
+        "faculty": "FGCE",
+        "department": "EEE",
+        "level": 300,
+        "course_code": "EEE302"
+    },
+    {
+        "name": "Wireless Communication",
+        "faculty": "FGCE",
+        "department": "TEC",
+        "level": 400,
+        "course_code": "TEC401"
+    }
+]
